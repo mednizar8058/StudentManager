@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		232194E426711E9800A5035D /* AddStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232194E326711E9800A5035D /* AddStudentViewController.swift */; };
 		23C549B9266E77AA00CC7772 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C549B8266E77AA00CC7772 /* AppDelegate.swift */; };
 		23C549BB266E77AA00CC7772 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C549BA266E77AA00CC7772 /* SceneDelegate.swift */; };
-		23C549BD266E77AA00CC7772 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C549BC266E77AA00CC7772 /* ViewController.swift */; };
+		23C549BD266E77AA00CC7772 /* ShowStudentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C549BC266E77AA00CC7772 /* ShowStudentsController.swift */; };
 		23C549C0266E77AA00CC7772 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23C549BE266E77AA00CC7772 /* Main.storyboard */; };
 		23C549C3266E77AA00CC7772 /* StudentManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23C549C1266E77AA00CC7772 /* StudentManager.xcdatamodeld */; };
 		23C549C5266E77AB00CC7772 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23C549C4266E77AB00CC7772 /* Assets.xcassets */; };
@@ -17,10 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		232194E326711E9800A5035D /* AddStudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStudentViewController.swift; sourceTree = "<group>"; };
 		23C549B5266E77AA00CC7772 /* StudentManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23C549B8266E77AA00CC7772 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23C549BA266E77AA00CC7772 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		23C549BC266E77AA00CC7772 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		23C549BC266E77AA00CC7772 /* ShowStudentsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowStudentsController.swift; sourceTree = "<group>"; };
 		23C549BF266E77AA00CC7772 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		23C549C2266E77AA00CC7772 /* StudentManager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudentManager.xcdatamodel; sourceTree = "<group>"; };
 		23C549C4266E77AB00CC7772 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,8 +62,9 @@
 			children = (
 				23C549B8266E77AA00CC7772 /* AppDelegate.swift */,
 				23C549BA266E77AA00CC7772 /* SceneDelegate.swift */,
-				23C549BC266E77AA00CC7772 /* ViewController.swift */,
+				23C549BC266E77AA00CC7772 /* ShowStudentsController.swift */,
 				23C549BE266E77AA00CC7772 /* Main.storyboard */,
+				232194E326711E9800A5035D /* AddStudentViewController.swift */,
 				23C549C4266E77AB00CC7772 /* Assets.xcassets */,
 				23C549C6266E77AB00CC7772 /* LaunchScreen.storyboard */,
 				23C549C9266E77AB00CC7772 /* Info.plist */,
@@ -141,7 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23C549BD266E77AA00CC7772 /* ViewController.swift in Sources */,
+				23C549BD266E77AA00CC7772 /* ShowStudentsController.swift in Sources */,
+				232194E426711E9800A5035D /* AddStudentViewController.swift in Sources */,
 				23C549C3266E77AA00CC7772 /* StudentManager.xcdatamodeld in Sources */,
 				23C549B9266E77AA00CC7772 /* AppDelegate.swift in Sources */,
 				23C549BB266E77AA00CC7772 /* SceneDelegate.swift in Sources */,
