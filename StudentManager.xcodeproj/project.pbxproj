@@ -15,6 +15,7 @@
 		23C549C3266E77AA00CC7772 /* StudentManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23C549C1266E77AA00CC7772 /* StudentManager.xcdatamodeld */; };
 		23C549C5266E77AB00CC7772 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23C549C4266E77AB00CC7772 /* Assets.xcassets */; };
 		23C549C8266E77AB00CC7772 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23C549C6266E77AB00CC7772 /* LaunchScreen.storyboard */; };
+		23F7BFDD26765134002BA0A2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F7BFDC26765134002BA0A2 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		23C549C4266E77AB00CC7772 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23C549C7266E77AB00CC7772 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23C549C9266E77AB00CC7772 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23F7BFDC26765134002BA0A2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				23C549B8266E77AA00CC7772 /* AppDelegate.swift */,
 				23C549BA266E77AA00CC7772 /* SceneDelegate.swift */,
 				23C549BC266E77AA00CC7772 /* ShowStudentsController.swift */,
+				23F7BFDC26765134002BA0A2 /* SettingsViewController.swift */,
 				23C549BE266E77AA00CC7772 /* Main.storyboard */,
 				232194E52671205700A5035D /* AddStudentsController.swift */,
 				23C549C4266E77AB00CC7772 /* Assets.xcassets */,
@@ -149,6 +152,7 @@
 				23C549B9266E77AA00CC7772 /* AppDelegate.swift in Sources */,
 				23C549BB266E77AA00CC7772 /* SceneDelegate.swift in Sources */,
 				232194E62671205700A5035D /* AddStudentsController.swift in Sources */,
+				23F7BFDD26765134002BA0A2 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
