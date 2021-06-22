@@ -12,15 +12,17 @@ class AddStudentsController: UITableViewController, UIImagePickerControllerDeleg
 
     
     @IBOutlet weak var profileImg: UIImageView!
-    @IBOutlet weak var fname: UILabel!
+    @IBOutlet weak var fname: UITextField!
+    @IBOutlet weak var lname: UITextField!
+    @IBOutlet weak var age: UITextField!
+    @IBOutlet weak var dateInput: UITextField!
+    
+    let datePicker = UIDatePicker()
     override func viewDidLoad() {
         super.viewDidLoad()
+        createDatePicker()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
     }
 
     // MARK: - Table view data source
@@ -35,7 +37,7 @@ class AddStudentsController: UITableViewController, UIImagePickerControllerDeleg
         return 6
     }
     
-    
+    // to present the uiimagepicker
     @IBAction func editProfileImg(_ sender: UIButton) {
         let controller = UIImagePickerController()
         controller.delegate = self
@@ -44,73 +46,71 @@ class AddStudentsController: UITableViewController, UIImagePickerControllerDeleg
     }
     
     
-    
+    // when the user tap cancel
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
     
+    //when an image is picked from the gallery
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let img = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         profileImg.image = img
         dismiss(animated: true, completion: nil)
     }
     
+    func createDatePicker(){
+        
+        /*let dateFormatter = DateFormatter()
+        DateFormatter.dateFormat(fromTemplate: "MM/DD/YYYY", options: <#T##Int#>, locale: <#T##Locale?#>)*/
+        //toolbar to hold Done button
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit();
+        
+        //bar button
+        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(didTapDone))
+        
+        //assign done btn to toolbar
+        toolbar.setItems([doneBtn], animated: true)
+        
+        //assign toolbar
+        dateInput.inputAccessoryView = toolbar
+        
+        //assign datepicker
+        dateInput.inputView = datePicker
+        
+    }
+    
+    @objc func didTapDone(){
+        dateInput.text = "\(datePicker.date)"
+        self.view.endEditing(true)
+    }
+    let student = Student(context:context)
+    @IBAction func createNewSrudent(){
+        
+        student.fname = fname.text
+        student.lname = lname.text
+        student.age = age.text
+        student.profilePic = profileImg.image?.pngData()
+        
+        do{
+            try! context.save()
+            print("student saved")
+        }
+        
+        /*let controller:ShowStudentsController = ShowStudentsController()
+        controller.showBtn.badgeValue = "1"
+        
+        */
+        
+        
+    }
+    
+    
+    
+    
     
     
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

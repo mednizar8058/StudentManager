@@ -21,7 +21,11 @@
                             <items>
                                 <navigationItem id="dlx-8j-Ofb">
                                     <barButtonItem key="leftBarButtonItem" title="Cancel" id="DvX-0h-x4Y"/>
-                                    <barButtonItem key="rightBarButtonItem" title="Save" id="nzj-4x-uw4"/>
+                                    <barButtonItem key="rightBarButtonItem" title="Save" id="nzj-4x-uw4">
+                                        <connections>
+                                            <action selector="createNewSrudent" destination="SUz-iL-1Bb" id="jfj-7C-epg"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </navigationItem>
                             </items>
                         </navigationBar>
@@ -186,7 +190,10 @@
                     <navigationItem key="navigationItem" id="ecD-rb-VIj"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="fname" destination="1LH-VJ-rkp" id="mia-CX-jEb"/>
+                        <outlet property="age" destination="mpt-TX-d3V" id="2lv-s5-0fM"/>
+                        <outlet property="dateInput" destination="oTX-Gd-pXI" id="vAs-wn-dNp"/>
+                        <outlet property="fname" destination="QQQ-sL-8Tx" id="BMX-Oj-Iic"/>
+                        <outlet property="lname" destination="5py-sN-Qvt" id="78M-Sy-jyo"/>
                         <outlet property="profileImg" destination="BHh-uL-17D" id="4CK-oE-tae"/>
                     </connections>
                 </tableViewController>
@@ -215,7 +222,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gMe-8T-UGq"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="More" image="pencil.and.ellipsis.rectangle" catalog="system" id="Iqx-fB-sSV"/>
@@ -272,6 +279,9 @@
                         <viewLayoutGuide key="safeArea" id="kIF-ym-3Fc"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Show" image="list.dash" catalog="system" id="Xhk-WB-LGH"/>
+                    <connections>
+                        <outlet property="showBtn" destination="Xhk-WB-LGH" id="J6c-Rl-miz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SL3-ej-iTT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
